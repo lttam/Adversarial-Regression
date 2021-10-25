@@ -1,6 +1,6 @@
 function [g, obj] = grad_f_KL2(beta_var, Omega, problem)
-
 % return the gradient for KL ambiguity set
+
     % for numerical issue for sqrt(Omega) --> logdet
     EPS = 1e-10;    
     
@@ -33,7 +33,7 @@ function [g, obj] = grad_f_KL2(beta_var, Omega, problem)
 end
 
 function value = logdet(A)
-% Compute the logdeterminant of A
+% Compute the log-determinant of A
     value = 2*sum(log(diag(chol(A, 'lower'))));
 end
 
@@ -44,4 +44,6 @@ function [f, g] = obj_func_KL(gamma, D, I, rho)
         g = rho - temp - trace((I - D/gamma)\D)/gamma;
     end
 end
+
+
 

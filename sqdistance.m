@@ -14,10 +14,7 @@ elseif nargin == 2
     D = bsxfun(@plus,full(dot(B,B,1)),full(dot(A,A,1))')-full(2*(A'*B));
 elseif nargin == 3
     assert(size(A,1)==size(B,1));
-    
-    % ORIGINAL
-    R = chol(M);
-        
+    R = chol(M);        
     RA = R*A;
     RB = R*B;
     D = bsxfun(@plus,full(dot(RB,RB,1)),full(dot(RA,RA,1))')-full(2*(RA'*RB));
@@ -28,3 +25,5 @@ elseif nargin == 4
     RB = R*B;
     D = bsxfun(@plus,full(dot(RB,RB,1)),full(dot(RA,RA,1))')-full(2*(RA'*RB));
 end
+
+

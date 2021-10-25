@@ -38,16 +38,12 @@ function [f, g] = obj_func_W(gamma, Omega, V, I, rho)
 end
 
 function T = inv_aux_W(gamma, I, V)
-% compute inv(gamma*I - V) by Woodbury
+% compute inv(gamma*I - V) by Woodbury matrix identity
 % Get two largest absolute eigenvalues
 [C, B] = eigs(V, 2); % V = cVec*bVal*cVec'
 
 tmp = diag((-diag(B).^(-1) + (1/gamma)).^(-1));
 T = I/gamma - gamma^(-2)*C*tmp*C'; 
 end
-
-
-
-
 
 

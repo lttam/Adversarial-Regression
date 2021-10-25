@@ -1,8 +1,13 @@
-+++++ Code for the submission: +++++
-"Adversarial Regression with Doubly Non-Negative Weighting Matrices"
+++++++++++++++ Code for the paper ++++++++++++++
+"Adversarial Regression with Doubly Non-Negative Weighting Matrices".
+Tam Le*, Truyen Nguyen*, Makoto Yamada, Jose Blanchet, Viet Anh Nguyen.
+NeurIPS, 2021.
+++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 ===== + Requirement:
 - Matlab Optimization Toolbox (for fmincon function)
+
 
 ===== + Details:
 - datasets folder: contains all 8 datasets (X: #samples x #features, Y: label)
@@ -21,13 +26,10 @@
 - NW2: Nadaraya-Watson estimate
 - LLR2: locally linear regression estimate
 
-- test_ARS_Bures.m / test_ARS_LogDet.m: toy examples for using the adversarial reweighting schemes
-using Bures-Wasserstein uncertainty set, and using the log-determinant uncertainty set respectively.
+- test_ARS_Bures.m / test_ARS_LogDet.m: toy examples for using the adversarial reweighting schemes using Bures-Wasserstein uncertainty set, and using the log-determinant uncertainty set respectively.
 - test_NW: toy example for Nadaraya-Watson estimate.
 
-===== + For the baseline NWMetric [Noh et al., 2017]
+
+===== + For the baseline NWMetric [Noh et al., 2017] (third-party toolbox)
 - Code is available at: https://github.com/nohyung/Nadaraya-Watson-Regression-Metric
-
-
-
 

@@ -52,7 +52,7 @@ function [ options ] = nagd_settings(varargin)
     if expectval
         error(sprintf('Expected value for property ''%s''.', arg));
     end
-
+end
 
 
 function options = nagd_core_options   
@@ -66,4 +66,5 @@ function options = nagd_core_options
     options.tau = 0.5;
     
     % options for printing out results
-    options.verbose = 1;
+    options.verbose = 1; 
+end
